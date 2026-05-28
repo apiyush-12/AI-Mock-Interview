@@ -1,52 +1,68 @@
-AI Mock Interview Platform 🎙️🤖
+# 🎙️ AI Mock Interview Platform
 
-An AI-powered mock interview platform that generates personalized interview questions, conducts voice-enabled interviews, records responses, and provides intelligent feedback using Google's Gemini AI.
+> An AI-powered mock interview platform that generates personalized interview questions, conducts voice-enabled interviews, records responses, and provides intelligent feedback using Google's Gemini AI.
 
-📌 Overview
+---
+
+# 📌 Overview
 
 AI Mock Interview Platform is a full-stack web application designed to help students and professionals prepare for technical interviews through AI-generated mock interview sessions.
 
 Users can create customized interviews by providing:
 
-💼 Job Role
-📝 Job Description / Tech Stack
-👨‍💻 Years of Experience
+- 💼 Job Role
+- 📝 Job Description / Tech Stack
+- 👨‍💻 Years of Experience
 
 The system generates personalized interview questions using Gemini AI and allows users to answer them through voice recording. AI then evaluates the responses and provides ratings and feedback for improvement.
 
-✨ Features
-🎯 AI-Powered Interview Generation
-Generates interview questions dynamically.
-Questions are tailored based on:
-Job Role
-Tech Stack
-Years of Experience
-🎤 Voice-Enabled Interviews
-Speech-to-Text integration.
-Answer interview questions verbally.
-Provides a realistic interview experience.
-📹 Webcam Support
-Real-time webcam integration.
-Simulates actual interview environments.
-🤖 AI Feedback & Evaluation
-Evaluates user responses.
-Generates:
-Rating
-Feedback
-Improvement Suggestions
-🔐 User Authentication
-Secure authentication using Clerk.
-Personalized user dashboard.
-📊 Interview History
-View all previous interview sessions.
-Track progress over time.
-💾 Database Integration
-Stores:
-Interview Questions
-User Responses
-AI Feedback
-Interview Metadata
-🏗️ System Architecture
+---
+
+# ✨ Features
+
+## 🎯 AI-Powered Interview Generation
+
+- Generates interview questions dynamically
+- Tailored based on:
+  - Job Role
+  - Tech Stack
+  - Years of Experience
+
+## 🎤 Voice-Enabled Interviews
+
+- Speech-to-Text Integration
+- Voice-Based Answer Recording
+- Realistic Interview Experience
+
+## 📹 Webcam Integration
+
+- Real-Time Video Recording
+- Live Camera Preview
+- Simulated Interview Environment
+
+## 🤖 AI Feedback & Evaluation
+
+- AI-generated Ratings
+- Detailed Feedback
+- Improvement Suggestions
+
+## 🔐 User Authentication
+
+- Clerk Authentication
+- Secure Login & Signup
+- User-specific Interview History
+
+## 📊 Interview History Dashboard
+
+- View Previous Interviews
+- Track Progress
+- Access Past Feedback
+
+---
+
+# 🏗️ System Architecture
+
+```text
 User
  │
  ▼
@@ -72,9 +88,7 @@ Generate Questions
 Interview Session
  │
  ├── Webcam Feed
- │
  ├── Speech Recognition
- │
  └── User Response
  │
  ▼
@@ -89,40 +103,59 @@ PostgreSQL Database
  │
  ▼
 Interview History Dashboard
-🛠️ Tech Stack
-Frontend
-React.js
-Next.js (App Router)
-Tailwind CSS
-ShadCN UI
-Backend
-Next.js Server Components
-API Integration
-Database
-PostgreSQL
-Drizzle ORM
-Authentication
-Clerk Authentication
-AI Integration
-Google Gemini API
-Gemini 3.1 Flash Lite
-Additional Libraries
-React Webcam
-Speech Recognition API
-UUID
-Moment.js
-Lucide React
-📂 Project Structure
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React.js
+- Next.js (App Router)
+- Tailwind CSS
+- ShadCN UI
+
+## Backend
+
+- Next.js Server Components
+- API Integration
+
+## Database
+
+- PostgreSQL
+- Drizzle ORM
+
+## Authentication
+
+- Clerk Authentication
+
+## AI Integration
+
+- Google Gemini API
+- Gemini 3.1 Flash Lite
+
+## Additional Libraries
+
+- React Webcam
+- Speech Recognition API
+- UUID
+- Moment.js
+- Lucide React
+
+---
+
+# 📂 Project Structure
+
+```text
 ai-interview/
 │
 ├── app/
-│   │
 │   ├── (auth)/
 │   │   ├── sign-in/
 │   │   └── sign-up/
 │   │
 │   ├── dashboard/
-│   │   │
 │   │   ├── _components/
 │   │   │   ├── AddNewInterview.jsx
 │   │   │   ├── Header.jsx
@@ -148,12 +181,8 @@ ai-interview/
 │   └── page.js
 │
 ├── components/
-│   └── ui/
-│
 ├── lib/
-│
 ├── public/
-│
 ├── utils/
 │   ├── db.js
 │   ├── schema.js
@@ -164,98 +193,121 @@ ai-interview/
 ├── next.config.mjs
 ├── package.json
 └── .env.local
-⚙️ Installation & Setup
-1️⃣ Clone Repository
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
 git clone https://github.com/apiyush-12/AI-Mock-Interview.git
 cd AI-Mock-Interview
-2️⃣ Install Dependencies
+```
+
+## Install Dependencies
+
+```bash
 npm install
-3️⃣ Configure Environment Variables
+```
 
-Create a .env.local file:
+## Configure Environment Variables
 
-# Clerk
+Create a `.env.local` file:
 
+```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
 
-# Gemini AI
-
 NEXT_PUBLIC_GEMINI_API_KEY=
-
-# PostgreSQL
 
 DATABASE_URL=
 
-# Configuration
-
 NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT=5
-4️⃣ Run Database Migration
+```
+
+## Run Database Migration
+
+```bash
 npx drizzle-kit push
-5️⃣ Start Development Server
+```
+
+## Start Development Server
+
+```bash
 npm run dev
+```
 
-Application will run on:
+Application will run at:
 
+```text
 http://localhost:3000
-🗄️ Database Schema
-MockInterview
-Column	Description
-id	Primary Key
-mockId	Unique Interview ID
-jsonMockResp	AI Generated Questions
-jobPosition	Job Position
-jobDesc	Job Description
-jobExperience	Experience
-createdBy	User Email
-createdAt	Creation Date
-🔄 Workflow
-Step 1
+```
 
-User signs in using Clerk Authentication.
+---
 
-Step 2
+# 🔄 Workflow
 
-User enters:
+1. User signs in using Clerk Authentication.
+2. User enters:
+   - Job Role
+   - Tech Stack
+   - Years of Experience
+3. Gemini AI generates interview questions.
+4. User starts interview session.
+5. Speech Recognition records answers.
+6. AI evaluates responses.
+7. Feedback and ratings are generated.
+8. Data is stored in PostgreSQL.
+9. Users can review previous interviews.
 
-Job Role
-Tech Stack
-Years of Experience
-Step 3
+---
 
-Gemini AI generates customized interview questions.
+# 🚀 Future Enhancements
 
-Step 4
+- Resume-Based Interview Generation
+- Coding Interview Mode
+- Behavioral Interview Mode
+- AI Career Recommendations
+- PDF Report Export
+- Interview Analytics Dashboard
+- Multi-Language Support
+- Real-Time Face Analysis
+- Mock HR Round Simulation
 
-User starts interview session.
+---
 
-Step 5
+# 👨‍💻 Author
 
-Voice answers are recorded using Speech Recognition.
+### Piyush Kumar
 
-Step 6
+**B.Tech – Computer Networking & Cyber Security**
 
-AI evaluates responses.
+### Areas of Interest
 
-Step 7
+- Cyber Security
+- Artificial Intelligence
+- Full Stack Development
+- Cloud Computing
+- IoT & Embedded Systems
 
-Rating and feedback are generated.
+### GitHub
 
-Step 8
+https://github.com/apiyush-12
 
-Results are stored in PostgreSQL.
+---
 
-Step 9
+# ⭐ Support
 
-User can view interview history from Dashboard.
+If you found this project useful, consider giving it a ⭐ on GitHub.
 
-🚀 Future Enhancements
-Resume-Based Interview Generation
-Coding Interview Mode
-Behavioral Interview Mode
-AI Career Recommendations
-PDF Report Export
-Interview Analytics Dashboard
-Multi-Language Support
-Real-Time Face Analysis
-Mock HR Round Simulation
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ using React, Next.js, Gemini AI, PostgreSQL, Drizzle ORM, Clerk Authentication, Tailwind CSS, and ShadCN UI.
