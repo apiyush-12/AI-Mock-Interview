@@ -1,6 +1,6 @@
 # 🎙️ AI Mock Interview Platform
 
-> An AI-powered mock interview platform that generates personalized interview questions, conducts voice-enabled interviews, records responses, and provides intelligent feedback using Google's Gemini AI.
+> AI-powered mock interview platform that generates personalized interview questions, conducts voice-enabled interviews, records responses, and provides intelligent feedback using Google's Gemini AI.
 
 ---
 
@@ -10,9 +10,9 @@ AI Mock Interview Platform is a full-stack web application designed to help stud
 
 Users can create customized interviews by providing:
 
-- 💼 Job Role
-- 📝 Job Description / Tech Stack
-- 👨‍💻 Years of Experience
+- 💼 Job Role (Full Stack dev, Network Engineer, Frontend Dev, backend Dev, Cyber Security Analyst, DevOps Engineer, etc)
+- 📝 Job Description / Tech Stack (React, MySQL, Firebase, API, DSA, Networking, Cloud, AWS, etc)
+- 👨‍💻 Years of Experience (2, 4, 5......)
 
 The system generates personalized interview questions using Gemini AI and allows users to answer them through voice recording. AI then evaluates the responses and provides ratings and feedback for improvement.
 
